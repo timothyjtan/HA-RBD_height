@@ -20,11 +20,11 @@
     * Change `macosclangrelease` depending on your operating system.
     * Each replicate for each mutation took approximately 30 minutes to run on a computer with 16 GB RAM and a 2 GHz Quad-Core Intel Core i5 processor.
 
-3. Examine the `.sc` score file and select the pose that has the lowest overall score. Copy this file to another folder for fast relax.
+3. Examine the .sc score file and select the pose that has the lowest overall score. Copy this file to another folder for fast relax.
 
 4. Generate a constraint file using `<rosetta_location>/main/source/bin/minimize_with_cst.static.linuxgccrelease -s <pdb file with lowest score after point mutagenesis>.pdb -in:file:fullatom -ignore_unrecognized_res -fa_max_dis 9.0 -database <rosetta_location>/main/database/ -ddg::harmonic_ca_tether 0.5 -score:weights <rosetta_location>/main/database/scoring/weights/pre_talaris_2013_standard.wts -restore_pre_talaris_2013_behavior -ddg::constraint_weight 1.0 -ddg::out_pdb_prefix min_cst_0.5 -ddg::sc_min_only false -score:patch <rosetta_location>/main/database/scoring/weights/score12.wts_patch > mincst.log`.
 
-5. Convert the log file to a cst file using `bash <rosetta_location>/main/source/src/apps/public/ddg/convert_to_cst_file.sh ./mincst.log > ./Constraint.cst`.
+5. Convert the .log file to a .cst file using `bash <rosetta_location>/main/source/src/apps/public/ddg/convert_to_cst_file.sh ./mincst.log > ./Constraint.cst`.
 
 6. With the **Constraint.cst** file and the pdb file of the lowest scoring pose from point mutagenesis in the same folder, perform fast relax using `<rosetta_location>/main/source/bin/relax.static.linuxgccrelease -database <rosetta_location>/main/database/ -in:file:s <pdb file with lowest score after point mutagenesis>.pdb -in:file:fullatom -relax:fast -constraints:cst_file Constraint.cst -relax:ramp_constraints false -nstruct 30`. Thirty poses were generated. Wild-type HA RBD fast relax was performed without prior point mutagenesis.
     * Change `macosclangrelease` depending on your operating system.
