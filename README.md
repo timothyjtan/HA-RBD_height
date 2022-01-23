@@ -16,7 +16,7 @@
 
 1. Renumber the PDB using `pdb_reres Mich14_RBD.pdb > Mich14_RBD_renum.pdb` in pdb-tools. Use the renumbered file for subsequent steps.
 
-2. For each mutation, perform point mutagenesis in triplicate. Point mutagenesis was run using `<rosetta_location>/main/source/bin/fixbb.static.macosclangrelease -s Mich14_RBD_renum.pdb -resfile <Mutation>.resfile -nstruct 100 ` while in the folder where `Mich14_RBD_renum.pdb` is located. One-hundred poses were generated.
+2. For each mutation, perform point mutagenesis in triplicate. Point mutagenesis was run using `<rosetta_location>/main/source/bin/fixbb.static.macosclangrelease -s Mich14_RBD_renum.pdb -resfile <Mutation>.resfile -nstruct 100` while in the folder where `Mich14_RBD_renum.pdb` is located. One-hundred poses were generated.
     * Change `macosclangrelease` depending on your operating system.
     * Each replicate for each mutation took approximately 30 minutes to run on a computer with 16 GB RAM and a 2 GHz Quad-Core Intel Core i5 processor.
 
