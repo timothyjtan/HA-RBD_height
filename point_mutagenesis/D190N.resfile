@@ -1,0 +1,9 @@
+# Resfile to calculate stability of D190N mutation in HA-RBD.
+
+NATAA
+EX 1 EX 2
+USE_INPUT_SC
+start
+
+# Mutate residue D190 (renumbered PDB = 134) to N.
+134 A PIKAA N

@@ -1,0 +1,9 @@
+# Resfile to calculate stability of V130I mutation in HA-RBD.
+
+NATAA
+EX 1 EX 2
+USE_INPUT_SC
+start
+
+# Mutate residue V130 (renumbered PDB = 74) to I.
+74 A PIKAA I

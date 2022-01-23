@@ -1,0 +1,9 @@
+# Resfile to calculate stability of F193S mutation in HA-RBD.
+
+NATAA
+EX 1 EX 2
+USE_INPUT_SC
+start
+
+# Mutate residue F193 (renumbered PDB = 137) to S.
+137 A PIKAA S

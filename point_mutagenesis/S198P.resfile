@@ -1,0 +1,9 @@
+# Resfile to calculate stability of S198P mutation in HA-RBD.
+
+NATAA
+EX 1 EX 2
+USE_INPUT_SC
+start
+
+# Mutate residue S198 (renumbered PDB = 142) to P.
+142 A PIKAA P

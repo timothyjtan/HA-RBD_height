@@ -1,0 +1,9 @@
+# Resfile to calculate stability of L194P mutation in HA-RBD.
+
+NATAA
+EX 1 EX 2
+USE_INPUT_SC
+start
+
+# Mutate residue L194 (renumbered PDB = 138) to P.
+138 A PIKAA P

@@ -1,0 +1,9 @@
+# Resfile to calculate stability of T128A mutation in HA-RBD.
+
+NATAA
+EX 1 EX 2
+USE_INPUT_SC
+start
+
+# Mutate residue T128 (renumbered PDB = 72) to A.
+72 A PIKAA A

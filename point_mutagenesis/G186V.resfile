@@ -1,0 +1,9 @@
+# Resfile to calculate stability of G186V mutation in HA-RBD.
+
+NATAA
+EX 1 EX 2
+USE_INPUT_SC
+start
+
+# Mutate residue G186 (renumbered PDB = 130) to V.
+130 A PIKAA V
